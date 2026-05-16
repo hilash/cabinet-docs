@@ -2,16 +2,59 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://docs.runcabinet.com";
+const SITE_TITLE = "Cabinet — Your Knowledge Base, your AI Team";
+const SITE_DESCRIPTION =
+  "Cabinet is a local-first knowledge base and AI team workspace. One folder for your notes, files, and agents — markdown-backed, portable, and yours.";
+
 export const metadata: Metadata = {
   title: {
-    default: "Cabinet — A smart folder for you and your AI team",
+    default: SITE_TITLE,
     template: "%s — Cabinet"
   },
-  description: "Cabinet is a local-first knowledge base and AI team workspace. One folder for your notes, files, and agents — markdown-backed, portable, and yours.",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://runcabinet.com"),
+  description: SITE_DESCRIPTION,
+  metadataBase: new URL(SITE_URL),
+  applicationName: "Cabinet Docs",
+  authors: [{ name: "Cabinet", url: "https://runcabinet.com" }],
+  keywords: [
+    "Cabinet",
+    "AI agents",
+    "knowledge base",
+    "local-first",
+    "markdown",
+    "Claude",
+    "Codex",
+    "BYOAI",
+    "AI workspace",
+    "open source"
+  ],
   icons: {
     icon: "/icon.png",
     apple: "/apple-touch-icon.png"
+  },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    siteName: "Cabinet Docs",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    locale: "en_US",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Cabinet — Your Knowledge Base, your AI Team"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    site: "@HilaShmuel",
+    creator: "@HilaShmuel",
+    images: ["/og.png"]
   }
 };
 
