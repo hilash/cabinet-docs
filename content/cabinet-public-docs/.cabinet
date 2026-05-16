@@ -1,0 +1,13 @@
+schemaVersion: 1
+id: cabinet-public-docs
+name: Cabinet Public Docs
+kind: child
+version: 0.1.0
+description: Public documentation website source cabinet for Cabinet.
+entry: index.md
+
+parent:
+  shared_context: []
+
+access:
+  mode: subtree-plus-parent-brief

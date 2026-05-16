@@ -1,0 +1,19 @@
+name: GTM Lead
+emoji: "🎯"
+role: Launch strategy
+type: lead
+model: claude-opus-4-7
+canDispatch: true
+heartbeats:
+  - cron: "0 9 * * 1"
+    label: "Monday standup"
+    prompt: "Open the launch room. Report what changed since Friday."
+  - cron: "0 17 * * 5"
+    label: "Friday wrap"
+    prompt: "Draft Monday's launch checklist."
+skills:
+  - competitor-brief
+  - launch-checklist
+budget:
+  daily:
+    maxCostUsd: 10

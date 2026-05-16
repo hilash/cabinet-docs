@@ -1,0 +1,12 @@
+flowchart LR
+  user(["You"]) -- writes --> page["Markdown page"]
+  page --> cabinet[(Cabinet)]
+  cabinet --> agents{{"AI team\n(.agents/)"}}
+  cabinet --> jobs[("Routines\n(.jobs/)")]
+  agents -- propose --> queue["Approval queue"]
+  jobs -- on schedule --> queue
+  queue -- you approve --> run[("Agent run")]
+  run --> output[/"New page in cabinet"/]
+  output --> cabinet
+  classDef accent fill:#F5E6D3,stroke:#8B5E3C,color:#3B2F2F;
+  class cabinet,output accent;
