@@ -15,6 +15,8 @@ A cabinet is <mark data-color="yellow">**a folder on your computer + an app for 
 
 Open Cabinet and you see three tabs — the same three you'll see across these docs.
 
+Have more than one area of work? Your home holds several cabinets you switch between like **[rooms](./rooms/)** (office, study, personal), each its own isolated workspace.
+
 ## The three sides of a Cabinet
 
 **<span class="tx-amber">Data.</span>** Your file tree. Notes, PDFs, spreadsheets, code, diagrams, images, embedded apps — everything in one browseable folder, with a rich markdown editor and first-class viewers. → [Read more about Data](./data/)

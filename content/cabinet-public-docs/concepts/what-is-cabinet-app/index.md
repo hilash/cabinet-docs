@@ -16,6 +16,7 @@ Cabinet is a local-first knowledge base with AI work built into the workspace.
 It gives you:
 
 - A file tree for your knowledge base.
+- Switchable rooms (workspaces) that keep separate areas of work isolated.
 - A rich markdown editor.
 - Search across your pages, scoped to the current room.
 - AI agents with personas and memory.

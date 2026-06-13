@@ -128,7 +128,7 @@ Every editor view has a **Source** toggle in the top-right. Click it to see (and
 
 - **Drag & Drop** — reorder pages in the sidebar, drop files onto the editor to upload.
 
-- **Cabinets** — subdirectories tagged as runtime cabinets get their own agents, jobs, and visibility.
+- **Rooms & sub-cabinets** — top-level cabinets are [rooms](../cabinet/rooms/) you switch between (each its own isolated workspace); nested sub-cabinets inside a room get their own agents, jobs, and visibility and roll up to it.
 
 - **Office documents** — drop `.docx`, `.xlsx`, or `.pptx` anywhere and they render inline. Read-only, with Download and Reveal-in-Finder buttons.
 
