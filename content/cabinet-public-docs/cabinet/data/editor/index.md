@@ -55,7 +55,7 @@ Cabinet auto-saves <mark data-color="yellow">500ms after the last keystroke</mar
 | --- | --- |
 | <kbd>/</kbd> on empty line | Open slash menu |
 | <kbd>⌘B</kbd> / <kbd>⌘I</kbd> | Bold / Italic |
-| <kbd>⌘K</kbd> | Search across pages |
+| <kbd>⌘K</kbd> | Search the current room |
 | <kbd>⌘⇧A</kbd> | Toggle AI panel |
 | <kbd>⌘`</kbd> | Toggle web terminal |
 | <kbd>⌘S</kbd> | Force save |

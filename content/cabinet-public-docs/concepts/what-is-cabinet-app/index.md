@@ -17,7 +17,7 @@ It gives you:
 
 - A file tree for your knowledge base.
 - A rich markdown editor.
-- Search across your pages.
+- Search across your pages, scoped to the current room.
 - AI agents with personas and memory.
 - Tasks and routines that can write back into the cabinet.
 - Git-backed history for changes.

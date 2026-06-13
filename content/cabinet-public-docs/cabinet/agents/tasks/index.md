@@ -14,7 +14,7 @@ order: 4
 
 A task is the <mark data-color="yellow">smallest unit of work</mark> in Cabinet. One prompt, one agent, one run, one output. Tasks are the thing routines schedule, agents dispatch, and you create from the kanban board.
 
-<div data-demo="task-board-mini" data-caption="The same board lives in Cabinet at /tasks."></div>
+<div data-demo="task-board-mini" data-caption="The same board lives in Cabinet, one click from any room."></div>
 
 ## Where tasks come from
 

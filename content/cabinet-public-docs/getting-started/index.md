@@ -122,7 +122,7 @@ Every editor view has a **Source** toggle in the top-right. Click it to see (and
 
 - **Web Terminal** — <kbd>⌘`</kbd> toggles an interactive terminal. Good for focused CLI work.
 
-- **Search** — <kbd>⌘K</kbd>, full-text across every markdown page, ranked by relevance.
+- **Search** — <kbd>⌘K</kbd>, full-text across the current room, ranked by relevance. (Opt in to search other rooms.)
 
 - **Version History** — click the clock icon on any page to see git commits, diff them, or one-click restore.
 

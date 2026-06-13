@@ -21,7 +21,7 @@ The surface where you read, write, and search.
 | --- | --- | --- |
 | <mark data-color="yellow">**WYSIWYG editor**</mark> | Rich text with bubble menu, slash commands, callouts, math, embeds. Roundtrips to plain markdown. | [Guides → Write & edit](../write-and-edit/) |
 | <mark data-color="yellow">**File tree with first-class types**</mark> | Markdown, CSV, PDF, code, mermaid, images, audio, office docs, embedded apps — all render inline. | [Reference → Supported file types](../../reference/file-structure/) |
-| <mark data-color="yellow">**⌘K full-text search**</mark> | Searches every page in the cabinet. Surfaces matches in milliseconds. | — |
+| <mark data-color="yellow">**⌘K full-text search**</mark> | Searches the current room (opt in to search other rooms). Surfaces matches in milliseconds. | — |
 | <mark data-color="yellow">**Wiki-links and `@` mentions**</mark> | Type `[[Page Name]]` or `@Page` to link or attach as agent context. | — |
 | <mark data-color="yellow">**Git-backed page history**</mark> | Click the clock icon on any page to see every change, diff them, restore. | — |
 | <mark data-color="yellow">**Highlights, colors, callouts**</mark> | Yellow key terms, red urgency, green confirmations. Inline marks roundtrip through markdown. | — |

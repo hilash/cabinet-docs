@@ -36,7 +36,7 @@ The short version of the [full changelog](https://github.com/hilash/cabinet/blob
 - 🟢 **First-class viewers** — PDF, CSV, Mermaid, code, images, video, audio, Office docs, embedded HTML apps
 - 🟢 **Notebook viewer** — `.ipynb` cells, outputs, visualizations
 - 🟢 **Search palette** — `⌘K` / `/` 2-pane palette backed by daemon-side FlexSearch
-- 🔵 **Cabinet-scoped URLs** — unified hash scheme; legacy paths auto-redirect
+- 🟢 **Clean-path URLs** — `/room/<room>/<path>` mirror the file tree; `#` stays free for section anchors; legacy hash links auto-redirect
 
 ### 🟢 Agents & tasks
 - 🟢 **Agent page v2** — chat-first, conversations rail, editable identity, 100 famous-figure avatars, sub-task delegation
