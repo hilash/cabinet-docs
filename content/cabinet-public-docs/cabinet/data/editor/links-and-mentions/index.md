@@ -1,7 +1,7 @@
 ---
 title: "Links & mentions"
 created: "2026-05-04T00:00:00.000Z"
-modified: "2026-05-04T00:00:00.000Z"
+modified: "2026-06-13T00:00:00.000Z"
 status: draft
 tags:
   - editor
@@ -65,7 +65,7 @@ Cabinet treats <code>AGENTS.md</code> like a per-folder system prompt that <mark
 
 ## Page anchors
 
-Headings get auto-generated anchors. Click any heading on this docs site to copy a deep link. In source:
+Every heading gets an auto-generated anchor, in the Cabinet app and on this docs site alike, so a `#section` link jumps straight to that heading. Page URLs are clean and shareable (for example `/room/your-room/path/to/page#provider-routing`), so you can send a teammate to the exact spot. Click any heading on this docs site to copy its deep link. In source:
 
 ```md
 ## Provider routing
