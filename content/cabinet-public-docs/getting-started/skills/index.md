@@ -78,7 +78,7 @@ For **PTY/terminal-mode** continuations, the spawn is long-lived and can't dynam
 
 ## <span class="tx-red">Security model — read this before installing third-party skills</span>
 
-Cabinet's threat model is <mark data-color="amber">**local-only**</mark> — the daemon binds to `127.0.0.1`, no auth, single user. Within that boundary, the choices below are deliberate:
+Cabinet's default threat model is <mark data-color="amber">**local-first**</mark>: the daemon binds to `127.0.0.1` and runs as a single user with no login out of the box. You can put the whole instance behind a password and reach it over a LAN or Tailscale (see [Authentication & remote access](../../guides/authentication/)), but skills still run with the full authority of that single user. Within that boundary, the choices below are deliberate:
 
 ### 1. No runtime trust gate
 
