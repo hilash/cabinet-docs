@@ -66,10 +66,10 @@ A <span class="tx-accent">child cabinet</span> is a folder *inside* another cabi
 ```yaml
 providers:
   defaults:
-    lead: claude-opus-4-7
+    lead: claude-opus-4-8
     specialist: claude-sonnet-4-6
   fallbacks:
-    claude-opus-4-7:
+    claude-opus-4-8:
       - claude-sonnet-4-6
       - gpt-4.1
   budgets:

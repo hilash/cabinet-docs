@@ -66,7 +66,7 @@ The small habits that compound. Skim by section.
 
 > **Set per-task budgets in <code>.cabinet</code>.** A single hard cap (<code>budget.perTask.maxCostUsd: 5</code>) prevents runaway runs.
 
-> **Fallback chains save the day.** Configure <code>fallbacks.claude-opus-4-7</code> to drop to Sonnet, then GPT, when the primary 429s.
+> **Fallback chains save the day.** Configure <code>fallbacks.claude-opus-4-8</code> to drop to Sonnet, then GPT, when the primary 429s.
 
 > **Local models for private data.** Ollama + a 70B model is competent for most internal work. <span class="tx-accent">Zero API spend.</span>
 

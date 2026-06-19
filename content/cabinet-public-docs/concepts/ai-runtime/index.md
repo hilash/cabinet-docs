@@ -53,7 +53,7 @@ A persona declares a default model. A routine, a task, or even a single dispatch
 # In persona.md — the default
 ---
 name: GTM Lead
-model: claude-opus-4-7
+model: claude-opus-4-8
 ---
 
 # In a routine — Friday wraps go on Opus, daily pulses on Haiku
@@ -62,7 +62,7 @@ heartbeats:
     model: claude-haiku-4-5
     prompt: "Inbox triage."
   - cron: "0 17 * * 5"
-    model: claude-opus-4-7
+    model: claude-opus-4-8
     prompt: "Friday wrap."
 ```
 

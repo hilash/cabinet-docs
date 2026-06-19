@@ -109,7 +109,7 @@ prompt: |
   Pull from /metrics/, /sales/pipeline.csv, /support/tickets.csv.
   End with a 3-sentence narrative for the cover email.
 
-model: claude-opus-4-7
+model: claude-opus-4-8
 effort: high
 budget:
   maxTokens: 80000

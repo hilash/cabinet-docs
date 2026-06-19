@@ -43,7 +43,7 @@ You read /inbox/ every weekday at 9am, tag urgency, write to /briefings/today.md
 
 | Field | Type | Required | Default | What it does |
 | --- | --- | --- | --- | --- |
-| <code>model</code> | string | no | inherits | Provider+model. Examples: <code>claude-opus-4-7</code>, <code>gpt-4.1</code>, <code>gemini-2.5-pro</code>, <code>ollama/llama-3.3-70b</code>. |
+| <code>model</code> | string | no | inherits | Provider+model. Examples: <code>claude-opus-4-8</code>, <code>gpt-4.1</code>, <code>gemini-2.5-pro</code>, <code>ollama/llama-3.3-70b</code>. |
 | <code>effort</code> | <code>"low"</code> \| <code>"medium"</code> \| <code>"high"</code> | no | <code>"medium"</code> | Default reasoning effort for this agent. |
 | <code>canDispatch</code> | boolean | no | <code>true</code> for leads, <code>false</code> for specialists | Allow `LAUNCH_TASK` / `SCHEDULE_JOB` proposals. |
 | <code>tools</code> | string[] | no | inherits | Allow-list of tool names. Empty = inherit cabinet defaults. |
@@ -103,7 +103,7 @@ name: GTM Lead
 emoji: "🎯"
 role: Launch strategy
 type: lead
-model: claude-opus-4-7
+model: claude-opus-4-8
 effort: high
 canDispatch: true
 visibility: cabinet

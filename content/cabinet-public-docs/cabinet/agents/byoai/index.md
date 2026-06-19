@@ -68,7 +68,7 @@ In <code>persona.md</code>:
 ```yaml
 ---
 name: GTM Lead
-model: claude-opus-4-7      # the default for this agent
+model: claude-opus-4-8      # the default for this agent
 ---
 ```
 
@@ -89,7 +89,7 @@ heartbeats:
     model: claude-haiku-4-5    # cheap for the daily pulse
     prompt: "Inbox triage."
   - cron: "0 17 * * 5"
-    model: claude-opus-4-7     # opus for the weekly synthesis
+    model: claude-opus-4-8     # opus for the weekly synthesis
     prompt: "Friday wrap."
 ```
 
@@ -100,11 +100,11 @@ In <code>.cabinet</code> you can set <span class="tx-accent">global routing</spa
 ```yaml
 providers:
   defaults:
-    lead: claude-opus-4-7
+    lead: claude-opus-4-8
     specialist: claude-sonnet-4-6
     triage: gpt-4.1
   fallbacks:
-    claude-opus-4-7:
+    claude-opus-4-8:
       - claude-sonnet-4-6
       - gpt-4.1
   budgets:
@@ -137,7 +137,7 @@ providers:
     specialist: ollama/qwen-2.5-coder
 ```
 
-Cabinet refuses any non-local provider. If an agent's persona points at <code>claude-opus-4-7</code>, the run errors with a clear "local-only" message instead of silently falling through.
+Cabinet refuses any non-local provider. If an agent's persona points at <code>claude-opus-4-8</code>, the run errors with a clear "local-only" message instead of silently falling through.
 
 ## Read on
 
