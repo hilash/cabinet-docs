@@ -81,7 +81,7 @@ name: GTM Lead
 emoji: "🎯"
 role: Launch strategy
 type: lead
-model: claude-opus-4-7
+model: claude-opus-4-8
 canDispatch: true
 heartbeats:
   - cron: "0 9 * * 1"        # Mon 9am
