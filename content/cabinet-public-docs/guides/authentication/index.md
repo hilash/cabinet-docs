@@ -50,6 +50,16 @@ Changing your password (or the salt or iteration count) invalidates existing ses
 | `CABINET_LOGIN_GLOBAL_MAX` | `60` | Global failed-attempt ceiling per window. |
 | `KB_ALLOW_HTTP` | _(unset)_ | Set to `1` to drop the cookie's `Secure` flag in production (plain-HTTP on a trusted network only). |
 
+## Background automation and the gate
+
+The gate covers Cabinet's own background work too. Scheduled jobs and persona heartbeats are fired by the scheduler **daemon** — a process separate from the web app — and it authenticates with the same `kb-auth` cookie a logged-in browser carries.
+
+Because it is a separate process, the daemon must see the **same auth values** as the app: `KB_PASSWORD`, `CABINET_AUTH_SALT`, and `CABINET_LOGIN_PBKDF2_ITERS`. If any of them differ between the two, the daemon derives a different token, every scheduled trigger is rejected with `401`, and nothing runs — while `/health` still reports `status: ok` with a non-zero `scheduledJobs`, so the failure is easy to miss.
+
+In practice this usually takes care of itself: the salt lives in `.cabinet.env` (both processes read it at boot), and the daemon backfills `KB_PASSWORD` and `CABINET_LOGIN_PBKDF2_ITERS` from `.env` in its working directory when they aren't already in its environment. The one case to watch is setting auth **only** through a process manager or container environment for the app, with no `.env` the daemon can read — then keep the daemon's environment in sync too.
+
+To confirm automation is actually running, check `/health`: alongside `scheduledJobs` it reports `lastTriggerAt`, `lastSuccessfulTriggerAt`, `lastFailedTriggerAt`, and `triggerFailures`. Triggers firing (`lastTriggerAt` advancing) while `lastSuccessfulTriggerAt` stays stale and `triggerFailures` climbs is the signature of a token mismatch.
+
 ## Reaching Cabinet from another device
 
 Cabinet can run behind a LAN address, a Tailscale tailnet, a VPN, or a reverse proxy. Two things to set:
