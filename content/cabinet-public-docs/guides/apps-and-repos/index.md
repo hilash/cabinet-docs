@@ -66,5 +66,5 @@ Sometimes you want to embed a small interactive widget inline, not as a full app
 
 ## Read on
 
-- [Load knowledge](../load-knowledge/) — symlinks, <code>.cabinet-meta</code>, <code>CABINET_DATA_DIR</code>.
+- [Connect Knowledge](../load-knowledge/) — local & cloud folders, <code>.cabinet-meta</code>, <code>CABINET_DATA_DIR</code>.
 - [Reference → Supported file types](../../reference/file-structure/) — what else Cabinet renders inline.

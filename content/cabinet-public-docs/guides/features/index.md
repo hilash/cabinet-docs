@@ -49,7 +49,7 @@ The file format and what it makes possible.
 | --- | --- | --- |
 | <mark data-color="green">**`.cabinet` manifest**</mark> | One YAML file names the cabinet, sets the entry page, and parents it. | [Reference → Manifest schema](../../reference/manifest-schema/) |
 | <mark data-color="green">**Child cabinets**</mark> | Nest cabinets inside cabinets. Each one has its own agents and visibility. | [Philosophy](../../philosophy/) |
-| <mark data-color="green">**Load knowledge / symlinks**</mark> | Point at any folder on disk — Cabinet creates a symlink, no copy. | [Guides → Load knowledge](../load-knowledge/) |
+| <mark data-color="green">**Connect Knowledge**</mark> | Point at any local or cloud folder (Drive, iCloud, OneDrive, Dropbox). Cabinet links it, no copy. | [Guides → Connect Knowledge](../load-knowledge/) |
 | <mark data-color="green">**Linked git repos**</mark> | A folder with `.repo.yaml` becomes a repo Cabinet's agents can reason about. | [Guides → Apps & repos](../apps-and-repos/) |
 | <mark data-color="green">**Embedded apps**</mark> | A folder with `index.html` renders as an iframe in the main panel. | [Guides → Apps & repos](../apps-and-repos/) |
 | <mark data-color="green">**Google Workspace pages**</mark> | A markdown page with `google:` frontmatter becomes a live Sheet/Doc/Slide. | — |

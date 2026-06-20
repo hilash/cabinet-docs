@@ -13,6 +13,7 @@ order: 30
 Practical workflows for using Cabinet.
 
 - [[Create New Cabinet]]
+- [[Connect Knowledge]]
 - [[Tasks and Routines]]
 - [[Skills]]
 - [[Showcase]]

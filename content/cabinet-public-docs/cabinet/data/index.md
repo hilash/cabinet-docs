@@ -27,6 +27,6 @@ The Data tab is <mark data-color="yellow">**your file tree**</mark>. Whatever li
 
 - [Markdown editor](./editor/) — slash commands, links & mentions, media & embeds, callouts.
 - [File types](./file-types/) — every format Cabinet knows how to show.
-- [Loading knowledge](../../guides/load-knowledge/) — symlinks, external sources, linked content.
+- [Connect Knowledge](../../guides/load-knowledge/) — local folders, cloud sources (Drive, iCloud, OneDrive, Dropbox), linked content.
 
 <span class="tx-muted">Tip: drag any folder onto Cabinet to make it a cabinet. Drag any file in to add it.</span>

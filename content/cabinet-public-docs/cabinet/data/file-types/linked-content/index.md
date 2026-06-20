@@ -24,7 +24,7 @@ Right-click any item in the sidebar → <span class="tx-accent">Load Knowledge</
 
 Cabinet creates a symlink inside the cabinet, so a folder at `/Users/you/Development/my-repo/` shows up as `./my-repo/` in the sidebar tree. <span class="tx-green">Edits stay in the original location.</span>
 
-For details and the `.cabinet-meta` schema see [Guides → Load knowledge](../../../../guides/load-knowledge/).
+For details and the `.cabinet-meta` schema see [Guides → Connect Knowledge](../../../../guides/load-knowledge/).
 
 ## .cabinet-meta
 
@@ -84,5 +84,5 @@ Useful if you keep cabinets on an encrypted volume or a synced folder. Agents re
 
 ## Read on
 
-- [Guides → Load knowledge](../../../../guides/load-knowledge/) — the right-click flow in detail.
+- [Guides → Connect Knowledge](../../../../guides/load-knowledge/) — the right-click flow in detail.
 - [Guides → Apps & repos](../../../../guides/apps-and-repos/) — embedded apps and repos paired together.
