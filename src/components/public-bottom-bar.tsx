@@ -6,8 +6,8 @@ import { Download, HelpCircle, Star } from "lucide-react";
 import { cn, withBasePath } from "@/lib/utils";
 
 const DISCORD_URL = "https://discord.gg/hJa5TRTbTH";
-const GITHUB_URL = "https://github.com/hilash/cabinet";
-const GET_CABINET_URL = "https://runcabinet.com";
+const GITHUB_URL = "https://github.com/cabinetai/cabinet";
+const GET_CABINET_URL = "https://github.com/cabinetai/cabinet/releases/latest";
 
 function DiscordIcon({ className }: { className?: string }) {
   return (
@@ -48,7 +48,7 @@ export function PublicBottomBar({ basePath }: { basePath: string }) {
 
   useEffect(() => {
     let cancelled = false;
-    fetch("https://api.github.com/repos/hilash/cabinet")
+    fetch("https://api.github.com/repos/cabinetai/cabinet")
       .then((r) => (r.ok ? r.json() : null))
       .then((data) => {
         if (!cancelled && data?.stargazers_count != null) {

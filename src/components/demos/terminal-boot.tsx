@@ -15,7 +15,7 @@ const LINES: { kind: "prompt" | "out" | "agent" | "ok"; text: string }[] = [
   { kind: "out", text: "" },
   { kind: "out", text: "Heartbeats scheduled: 18 this week" },
   { kind: "out", text: "" },
-  { kind: "ok", text: "Cabinet running at http://localhost:3000" },
+  { kind: "ok", text: "Cabinet running at http://127.0.0.1:4000" },
   { kind: "ok", text: "Your AI team is awake." },
 ];
 

@@ -82,4 +82,4 @@ Cabinet can run behind a LAN address, a Tailscale tailnet, a VPN, or a reverse p
 
 Cabinet's gate is a <mark data-color="amber">**single shared password**</mark> for the whole instance. There are no per-user accounts, roles, or per-user audit. It is designed to keep a self-hosted instance private on a network you trust, not to be a multi-tenant identity system. Agents and skills run with the full authority of that single user.
 
-For the full threat model and the exact token derivation, see [`docs/AUTH.md`](https://github.com/hilash/cabinet/blob/main/docs/AUTH.md) in the repository.
+For the full threat model and the exact token derivation, see [`docs/AUTH.md`](https://github.com/cabinetai/cabinet/blob/main/docs/AUTH.md) in the repository.

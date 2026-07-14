@@ -63,7 +63,7 @@ A real company isn't one big team. It's a tree: a CEO at the top, departments un
 You don't have to start from a blank folder. <mark data-color="amber">**[cabinets.sh](https://cabinets.sh)**</mark> is a public registry of plug-and-play cabinets — a complete AI team for a job hunt, a solo startup, a wedding, a podcast, a property portfolio. Clone one folder, run one command, and <span class="tx-accent">you have a team</span>:
 
 ```bash
-npx cabinets add <owner>/<template-name>
+npx cabinetai import <template-name>
 ```
 
 Open it in Cabinet. Every agent, every job, every page is already there. Edit a persona, change a schedule, point a job at a different folder — make it yours.

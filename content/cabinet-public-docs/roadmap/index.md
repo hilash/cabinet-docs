@@ -1,7 +1,7 @@
 ---
 title: "Roadmap"
 created: "2026-05-03T00:00:00.000Z"
-modified: "2026-05-09T00:00:00.000Z"
+modified: "2026-07-14T00:00:00.000Z"
 status: draft
 tags:
   - roadmap
@@ -18,17 +18,19 @@ What's already shipping, what's in flight, what's planned next.
 
 ## ✅ Already shipped
 
-The short version of the [full changelog](https://github.com/hilash/cabinet/blob/main/CHANGELOG.md). Latest: **v0.4.3** (April 2026).
+The short version of the [full changelog](https://github.com/cabinetai/cabinet/blob/main/CHANGELOG.md). The **v0.5.1** code is tagged, but the GitHub Release remains a draft until its npm and native-artifact gates pass.
 
 ### 🟢 Platforms & install
 - 🟢 **macOS native app** (Electron) — Apple Silicon + Intel `.dmg` builds, hardened-runtime entitlements
 - 🟢 **`npx` CLI** — `create-cabinet`, `cabinetai create / run / doctor / update / uninstall`
-- 🟢 **Linux** support via `npx`
+- 🟢 **Linux** support via checksum-verified prebuilt `npx` bundles
+- 🔵 **Windows native app (v0.5.1 release candidate)** — Squirrel installer + portable ZIP, with installed-app smoke testing; initially unsigned
 
 ### 🟣 AI runtime & providers
 - 🟣 **8 BYOAI CLI providers** — Claude, Codex, Gemini, OpenCode, Pi, +3 more
 - 🟣 **Skills system** — installable agent skills (Anthropic format), `~/.cabinet/skills/`, registry page with live manifests, tiered trust
 - 🟣 **Multi-provider runtime** — shared runtime picker, effort sliders, dynamic `listModels()`, brand icons
+- 🟣 **Guided provider setup** — Install → Sign in → Verify for Claude, Codex, Gemini, OpenCode, Pi, Grok, Copilot, and Cursor
 - 🟢 **Terminal mode** — persistent shell panel, PTY adapters per provider, fullscreen toggle, session resume
 
 ### 🟢 Data & file types
@@ -37,6 +39,7 @@ The short version of the [full changelog](https://github.com/hilash/cabinet/blob
 - 🟢 **Notebook viewer** — `.ipynb` cells, outputs, visualizations
 - 🟢 **Search palette** — `⌘K` / `/` 2-pane palette backed by daemon-side FlexSearch
 - 🟢 **Clean-path URLs** — `/room/<room>/<path>` mirror the file tree; `#` stays free for section anchors; legacy hash links auto-redirect
+- 🟢 **Native file/folder drop** — streamed imports with progress and files up to 1 GB
 
 ### 🟢 Agents & tasks
 - 🟢 **Agent page v2** — chat-first, conversations rail, editable identity, 100 famous-figure avatars, sub-task delegation
@@ -52,7 +55,7 @@ The short version of the [full changelog](https://github.com/hilash/cabinet/blob
 - 🔵 **Calendar** — off-window event chevrons, editable hours, density slider, deduped multi-cabinet cron events
 
 ### 🟢 Trust & infrastructure
-- 🟢 **Telemetry & privacy** — anonymous opt-out, Privacy toggle, [TELEMETRY.md](https://github.com/hilash/cabinet/blob/main/TELEMETRY.md)
+- 🟢 **Telemetry & privacy** — anonymous opt-out, Privacy toggle, [TELEMETRY.md](https://github.com/cabinetai/cabinet/blob/main/TELEMETRY.md)
 - 🟢 **Calm legal flow** — full-screen card, server-side acceptance, ToS + Privacy
 - 🔵 **MIT licensed** — fully open source
 - 🔵 **Accessibility** — P1/P2 audit pass, focus rings, aria-labels, AT-friendly task cards
@@ -62,7 +65,7 @@ The short version of the [full changelog](https://github.com/hilash/cabinet/blob
 ## ⚪ Coming next
 
 ### Platforms
-- ⚪ **Windows native** support (today: WSL2 only)
+- ⚪ **Windows code signing** — hardware-backed cloud signing with short-lived GitHub OIDC; v0.5.1 is intentionally unsigned
 - ⚪ **Linux / Ubuntu full polish** — packaged `.AppImage` / `.deb`, system tray
 - ⚪ **iOS / Android** companion apps (read-only first, write later)
 
@@ -75,10 +78,8 @@ The short version of the [full changelog](https://github.com/hilash/cabinet/blob
 - ⚪ **xAI Grok** direct API
 
 ### Integrations
-- ⚪ **Slack** — read channels, post summaries, agent DMs
-- ⚪ **Discord** — community channel ingestion + posting
-- ⚪ **Gmail** — inbox triage, draft replies, scheduled summaries
-- ⚪ **Google Workspace** — Drive (sync), Calendar (events as tasks), Docs import/export
+- ⚪ **Deeper Slack and Discord workflows** beyond the current MCP catalog entries
+- ⚪ **More guided hosted-service authorization** across the existing 50+ entry catalog
 - ⚪ **Image generation** — FLUX, Gemini, Grok, DALL·E, local SD via the same provider adapter pattern
 - ⚪ **GitHub** — PR review, issue triage, repo-aware agents
 - ⚪ **Notion / Linear** import bridges
@@ -89,8 +90,8 @@ The short version of the [full changelog](https://github.com/hilash/cabinet/blob
 - ⚪ **Shared agent libraries** — publish a team's agents, install across cabinets
 
 ### Localization & accessibility
-- ⚪ **RTL support** — Hebrew, Arabic, Persian, Urdu — right-to-left layout for sidebar, editor, and agent panels
-- ⚪ **Multi-language UI** — Spanish, French, German, Portuguese, Japanese, Chinese, more (community-translated)
+- ⚪ **Continue RTL polish** across Hebrew, Arabic, Persian, and Urdu surfaces
+- ⚪ **Continue translation coverage and review** across the existing multi-language UI
 - ⚪ **Localized agent personas** — built-in personas that speak the user's language by default
 - ⚪ **Translated docs & templates** — public docs and starter cabinets in the top-supported languages
 - ⚪ **Locale-aware dates & numbers** — calendar, schedule pickers, and reports respect system locale
@@ -121,4 +122,4 @@ Things we're thinking about, not promising:
 
 ## How this changes
 
-The roadmap moves with each release. Cabinet ships fast — see the [changelog ↗](https://github.com/hilash/cabinet/blob/main/CHANGELOG.md) for what landed last week. Want to push something up the list? Open a discussion in the [Discord](https://discord.gg/hJa5TRTbTH).
+The roadmap moves with each release. Cabinet ships fast — see the [changelog ↗](https://github.com/cabinetai/cabinet/blob/main/CHANGELOG.md) for what landed last week. Want to push something up the list? Open a discussion in the [Discord](https://discord.gg/hJa5TRTbTH).

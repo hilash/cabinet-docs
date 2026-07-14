@@ -132,7 +132,7 @@ export function PublicDemoPanels({ basePath }: { basePath: string }) {
           These rows show what a real Cabinet can contain. This public website never runs agents or tasks.
         </p>
         <a
-          href="https://runcabinet.com"
+          href="https://github.com/cabinetai/cabinet/releases/latest"
           target="_blank"
           rel="noreferrer"
           className="mt-2 inline-flex items-center gap-1.5 rounded-md bg-primary px-2 py-1 text-[10px] font-medium text-primary-foreground transition-colors hover:bg-primary/90"

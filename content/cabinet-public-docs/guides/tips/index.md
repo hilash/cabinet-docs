@@ -74,19 +74,17 @@ The small habits that compound. Skim by section.
 
 ## Privacy & local-first
 
-> **Cabinet doesn't phone home.** No telemetry by default. The only network calls are the ones agents make to your configured providers.
-
-> **<code>providers.localOnly: true</code> in <code>.cabinet</code> hard-locks to local models.** Useful for sensitive cabinets (clients, legal, medical).
+> **Cabinet is local-first, not network-free.** Your cabinet stays on disk, while update checks, optional anonymous telemetry, AI CLIs, and connected integrations can make network requests. Review Settings → Privacy and each provider's terms.
 
 > **<code>.gitignore</code> what shouldn't be shipped.** Default: <code>.chat/</code>, <code>.cabinet-state/</code>, <code>.cabinet.db</code>. Add anything cabinet-specific (raw client lists, API keys you accidentally committed).
 
-> **Templates strip <code>.gitignore</code>'d files at publish time.** <code>cabinetai publish</code> won't ship secrets if they're in <code>.gitignore</code>.
+> **Review every template submission manually.** The v0.5.1 CLI has no publish command that automatically strips secrets for you.
 
 > **CABINET_DATA_DIR can be encrypted.** Cabinet doesn't care where its files live. Point it at a FileVault / LUKS volume.
 
 ## Publishing & templates
 
-> **Test your template by installing it from a fresh clone.** <code>npx cabinets add ./your-template-path</code> works on local folders too.
+> **Test your template from a fresh clone.** Open or run the clean clone as a cabinet and verify its agents, jobs, and sample data before submitting it.
 
 > **The <code>description</code> field on <code>.cabinet</code> is your hook.** ≤80 chars, present tense, action-oriented. <span class="tx-accent">"Run your job search like a sales pipeline"</span> beats "A cabinet for searching jobs."
 

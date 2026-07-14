@@ -1,8 +1,8 @@
 import { Download, Github, MessageCircle } from "lucide-react";
 
 const DISCORD_URL = "https://discord.gg/hJa5TRTbTH";
-const GITHUB_STARS_URL = "https://github.com/hilash/cabinet/stargazers";
-const DOWNLOAD_URL = "https://runcabinet.com";
+const GITHUB_STARS_URL = "https://github.com/cabinetai/cabinet/stargazers";
+const DOWNLOAD_URL = "https://github.com/cabinetai/cabinet/releases/latest";
 
 export function DocFooterCta() {
   return (

@@ -92,18 +92,7 @@ Local wins on slug collisions. <mark data-color="green">If you don't like a bund
 
 ## Installing a skill
 
-```bash
-# Install from skills.sh into the current cabinet
-npx cabinetai skills add cabinet-app/competitor-brief
-
-# Install user-globally
-npx cabinetai skills add cabinet-app/competitor-brief --global
-
-# Install from a GitHub URL
-npx cabinetai skills add https://github.com/you/my-skill
-```
-
-Cabinet downloads the skill, runs a <span class="tx-accent">security scan</span> (see below), and asks you to confirm the allowed-tools list before activating it.
+Open **Settings → Skills**, choose **Add skill**, and paste a skills.sh slug, GitHub URL, or `npx skills add …` command. Choose whether to keep it in the current cabinet or in your user-global skill directory. Cabinet downloads the skill, runs a <span class="tx-accent">security scan</span> (see below), and asks you to review it before activation.
 
 ## Security model
 
@@ -122,7 +111,7 @@ When you install a skill, Cabinet scans for known dangerous patterns:
 - Filesystem access outside the cabinet.
 - Symlink shenanigans in the skill folder.
 
-The scan output is shown before you confirm the install. <code>--force</code> overrides the scan, but you'll see exactly what you're overriding.
+The scan output is shown before you confirm the install. Review warnings rather than bypassing them.
 
 ### Layer 3: run-time confirmation
 
@@ -140,23 +129,11 @@ The first time a skill tries to run a script, Cabinet asks you to confirm — <m
 - Usage stats and reviews.
 - A one-line install command.
 
-You can also publish your own:
-
-```bash
-# In a skill folder
-npx cabinetai skills publish
-```
-
-It opens a PR to the registry repo with your skill folder. Keep <code>SKILL.md</code> tight and the description honest — those are what people see in the picker.
+Publishing is handled by the skills.sh workflow, not by a `cabinetai skills publish` command in v0.5.1. Keep <code>SKILL.md</code> tight and the description honest — those are what people see in the picker.
 
 ## Updating skills
 
-```bash
-npx cabinetai skills update                # update all installed skills
-npx cabinetai skills update competitor-brief
-```
-
-Updates <span class="tx-accent">re-run the security scan</span> and re-prompt you for any new <code>allowed-tools</code> entries. <mark data-color="green">A skill can never silently gain a new permission.</mark>
+Manage installed skills from **Settings → Skills**. Cabinet records source metadata for imported skills and keeps cabinet-local and user-global scopes visible. Review upstream changes before replacing a locally installed skill.
 
 ## Read on
 

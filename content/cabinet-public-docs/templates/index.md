@@ -42,10 +42,10 @@ You install it. Cabinet picks up <mark data-color="amber">the agents, the jobs, 
 ## Install in one command
 
 ```bash
-npx cabinets add cabinet-app/job-hunt-hq
+npx cabinetai import job-hunt-hq
 ```
 
-That clones the template into your data folder, runs Cabinet's first-time setup for the cabinet, and asks you to confirm any heartbeats before they fire.
+That copies the template into a new directory. Enter it and run <code>npx cabinetai run</code> to open the imported agents, jobs, and sample content.
 
 If you only want one template from a monorepo:
 
@@ -59,14 +59,14 @@ git clone --filter=blob:none --sparse \
 
 | Template | What it does | Team | Get it |
 | --- | --- | --- | --- |
-| <mark data-color="amber">**ship-it-solo**</mark> | Full startup ops for a one-person team — strategy, product, growth, support | CEO, CTO, Growth Lead, Support Rep | <code>npx cabinets add cabinet-app/ship-it-solo</code> |
-| <mark data-color="blue">**job-hunt-hq**</mark> | Run your job search like a sales pipeline | Resume Tailor, Interview Coach, Networking Strategist, Offer Analyst | <code>npx cabinets add cabinet-app/job-hunt-hq</code> |
-| <mark data-color="green">**reply-to-everyone**</mark> | Email triage, drafting, follow-up automation | Inbox-Zero Strategist, Reply Drafter, Follow-up Nagger | <code>npx cabinets add cabinet-app/reply-to-everyone</code> |
-| <mark data-color="purple">**saas-startup**</mark> | Marketing, product, ops cabinets for a small SaaS | PM, Marketer, Customer Success, QA | <code>npx cabinets add cabinet-app/saas-startup</code> |
-| <mark data-color="red">**wedding-ops**</mark> | Wedding planning as a project, with a team | Planner, Budget Hawk, Day-of Coordinator | <code>npx cabinets add cabinet-app/wedding-ops</code> |
-| **podcast-machine** | Podcast pipeline — research, scripts, show notes, social | Producer, Researcher, Show-Notes Writer, Clip Strategist | <code>npx cabinets add cabinet-app/podcast-machine</code> |
-| **open-source-maintainer** | Issue triage, PR review prep, releases, community | Triage Lead, Docs Writer, Release Manager | <code>npx cabinets add cabinet-app/open-source-maintainer</code> |
-| **agency** | Multi-client agency ops with a child cabinet per client | Account Lead, Producer, Project Manager | <code>npx cabinets add cabinet-app/agency</code> |
+| <mark data-color="amber">**ship-it-solo**</mark> | Full startup ops for a one-person team — strategy, product, growth, support | CEO, CTO, Growth Lead, Support Rep | <code>npx cabinetai import ship-it-solo</code> |
+| <mark data-color="blue">**job-hunt-hq**</mark> | Run your job search like a sales pipeline | Resume Tailor, Interview Coach, Networking Strategist, Offer Analyst | <code>npx cabinetai import job-hunt-hq</code> |
+| <mark data-color="green">**reply-to-everyone**</mark> | Email triage, drafting, follow-up automation | Inbox-Zero Strategist, Reply Drafter, Follow-up Nagger | <code>npx cabinetai import reply-to-everyone</code> |
+| <mark data-color="purple">**saas-startup**</mark> | Marketing, product, ops cabinets for a small SaaS | PM, Marketer, Customer Success, QA | <code>npx cabinetai import saas-startup</code> |
+| <mark data-color="red">**wedding-ops**</mark> | Wedding planning as a project, with a team | Planner, Budget Hawk, Day-of Coordinator | <code>npx cabinetai import wedding-ops</code> |
+| **podcast-machine** | Podcast pipeline — research, scripts, show notes, social | Producer, Researcher, Show-Notes Writer, Clip Strategist | <code>npx cabinetai import podcast-machine</code> |
+| **open-source-maintainer** | Issue triage, PR review prep, releases, community | Triage Lead, Docs Writer, Release Manager | <code>npx cabinetai import open-source-maintainer</code> |
+| **agency** | Multi-client agency ops with a child cabinet per client | Account Lead, Producer, Project Manager | <code>npx cabinetai import agency</code> |
 
 [Browse all 20+ templates on cabinets.sh ↗](https://cabinets.sh)
 
@@ -78,23 +78,18 @@ A template is a starting point, not a contract. Once installed, <span class="tx-
 2. Open <code>.jobs/&lt;job&gt;.yaml</code>. Retime, retarget, disable, delete.
 3. Move folders. Rename pages. Add child cabinets.
 
-Cabinet doesn't track "diff from upstream." Once it's in your data folder, <mark data-color="green">it's yours</mark>. You can still pull updates from the template repo when they ship — it's just `git pull` from inside the cabinet folder.
+Cabinet doesn't track "diff from upstream." Once it's in your data folder, <mark data-color="green">it's yours</mark>. The import is a copy without the registry repository's Git history; compare or re-import a newer template separately if you want upstream changes.
 
 ## Publishing your own template
 
 Made something useful? Share it.
 
-```bash
-# In the cabinet folder you want to publish
-npx cabinets publish
-```
+The v0.5.1 `cabinetai` CLI does not expose a publish command. Prepare the cabinet in a clean repository and submit it to the Cabinet registry for review. Before opening a registry PR:
 
-That:
-
-1. Strips out anything in <code>.gitignore</code> (your real client data, API keys, chat logs).
-2. Generates a <code>README.md</code> at the cabinet root from the index.
-3. Validates the persona.md and job.yaml schemas.
-4. Opens a PR to the cabinets.sh registry repo with your folder.
+1. Remove private data, API keys, and chat logs; do not assume <code>.gitignore</code> cleans the submission automatically.
+2. Include a clear <code>README.md</code> at the cabinet root.
+3. Validate the <code>persona.md</code> and job YAML files.
+4. Open a PR to the <code>cabinetai/cabinets</code> registry with the template folder.
 
 Tips for a template people will actually install:
 

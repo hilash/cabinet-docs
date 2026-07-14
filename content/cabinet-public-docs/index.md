@@ -37,14 +37,14 @@ Cabinet collapses your notes, files, tasks, and AI agents into <mark data-color=
 - [Philosophy](./philosophy/) — the 90-second pitch. Why one folder beats a stack of tools.
 - [Concepts](./concepts/) — the app, the file format, the AI team model.
 - [Reference](./reference/) — CLI, file structure, manifest / persona / job / skill schemas.
-- [Bring your own AI](./cabinet/agents/byoai/) — wire up Claude, GPT, Gemini, Grok, or Ollama.
+- [Bring your own AI](./cabinet/agents/byoai/) — wire up Claude, Codex, Gemini, OpenCode, Pi, Grok, Copilot, or Cursor.
 
 ## Browse a ready-made AI team
 
 <mark data-color="amber">**[cabinets.sh](https://cabinets.sh)**</mark> is a public registry of plug-and-play cabinets — a complete AI team for a job hunt, a solo startup, a wedding, a podcast, a property portfolio. Clone one folder, run one command:
 
 ```bash
-npx cabinets add <owner>/<template-name>
+npx cabinetai import <template-name>
 ```
 
 <span class="tx-green">Open it in Cabinet. Every agent, every job, every page is already there.</span> Edit a persona, change a schedule, make it yours.
